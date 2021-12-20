@@ -7,8 +7,6 @@ import javax.swing.JOptionPane;
 /**
  *
  * @author Allan
- * Frustei-me pra pegar a idade, porém FACIL :P
- * Não validei o RG, pois fiquei com preguicinha :D
  */
 public class Home extends javax.swing.JFrame {
     PessoaTM PTM;
@@ -785,7 +783,7 @@ public class Home extends javax.swing.JFrame {
 
     private void edi_btn_salvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edi_btn_salvarActionPerformed
         int i = visu_tbl.getSelectedRow();
-        CPF pf = new CPF(cad_c_cpf.getText());
+        CPF pf = new CPF(edi_c_cpf.getText());
         
         Data d = new Data(edi_c_dtnasc.getText()+" ",Data.BarraSemHora);
         Data Hoje = new Data();
@@ -807,8 +805,6 @@ public class Home extends javax.swing.JFrame {
         }else{
             JOptionPane.showMessageDialog(rootPane,"CPF inválido!");
         }
-        
-        
         
         LIMPAREDI();
         LIMPAREXC();
